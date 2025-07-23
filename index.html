@@ -1,1 +1,142 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cobertura médica accesible con atención en Sanatorio Allende, Reina Fabiola y más. Cotizá tu cobertura médica en Córdoba en minutos.">
+  <title>Coberturas Médica Accesible en Córdoba</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .sticky-cta { position: sticky; bottom: 20px; z-index: 50; }
+    .form-input { transition: all 0.3s ease; }
+    .form-input:focus { border-color: #3B82F6; box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+    .required::after { content: '*'; color: #EF4444; margin-left: 4px; }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-4">
+    <div class="container mx-auto px-4 flex items-center">
+      <img src="https://i.ibb.co/tMPBQMsv/doctor.png" alt="Doctor medicina prepaga en Córdoba" class="w-16 h-16 rounded-full mr-4">
+      <div>
+        <h1 class="text-2xl font-bold">Planes Médicos Accesibles en Córdoba</h1>
+        <p class="text-sm">Atención en Sanatorio Allende, Reina Fabiola y más</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="container mx-auto px-4 py-8 max-w-3xl bg-white rounded-lg shadow-lg mt-6">
+    <h2 class="text-3xl font-bold text-blue-600 mb-4 text-center">Planes accesibles con atención en Sanatorio Allende y Reina Fabiola</h2>
+    <p class="text-lg text-gray-700 mb-6 text-center">Cobertura médica completa con prestadores de primer nivel en Córdoba. Sin pagar de más.</p>
+
+    <!-- Beneficios -->
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">¿Qué incluye tu plan?</h3>
+      <ul class="list-disc pl-6 text-gray-700">
+        <li class="mb-2">Consultas en todas las especialidades</li>
+        <li class="mb-2">Radiografías, diagnósticos y tratamientos</li>
+        <li class="mb-2">Internaciones, emergencias y cirugías</li>
+        <li class="mb-2">Medicamentos con cobertura desde 40% hasta 100%</li>
+        <li class="mb-2">Odontología sin coseguro</li>
+      </ul>
+    </div>
+
+    <!-- Testimonios -->
+    <div class="bg-gray-50 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">Lo que dicen nuestros clientes</h3>
+      <input type="hidden" name="form-name" value="contacto" />
+        <div class="space-y-4">
+        <div class="flex items-start">
+          <div class="text-yellow-400">★★★★★</div>
+          <p class="ml-4 text-gray-600">"La atención personalizada y la calidad de los sanatorios me dieron tranquilidad para cuidar de mi familia." - Ana G.</p>
+        </div>
+        <div class="flex items-start">
+          <div class="text-yellow-400">★★★★★</div>
+          <p class="ml-4 text-gray-600">"Nunca fue tan fácil acceder a especialistas de primer nivel. ¡Recomendado!" - Carlos M.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="bg-blue-50 p-6 rounded-lg">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Recibí asesoramiento personalizado hoy</h3>
+      <p class="text-gray-600 mb-4 text-center">⏳ Recibí propuesta en menos de 1 hora (lunes a viernes)</p>
+      <form action="gracias.html" onsubmit="conversionGoogle()" method="POST">
+        <input type="hidden" name="form-name" value="contacto" />
+        <div class="space-y-4">
+          <div>
+            <label for="name" class="block text-gray-700 font-medium required">Nombre completo</label>
+            <input type="text" id="name" name="name" required class="form-input w-full p-3 border rounded-lg focus:outline-none" />
+          </div>
+          <div>
+            <label for="phone" class="block text-gray-700 font-medium required">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required class="form-input w-full p-3 border rounded-lg focus:outline-none" />
+          </div>
+          <div>
+            <label for="dni" class="block text-gray-700 font-medium">DNI (opcional)</label>
+            <input type="text" id="dni" name="dni" class="form-input w-full p-3 border rounded-lg focus:outline-none" />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-medium">Email (opcional)</label>
+            <input type="email" id="email" name="email" class="form-input w-full p-3 border rounded-lg focus:outline-none" />
+          </div>
+          <button 
+            type="submit" 
+            class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
+          >
+            Solicitar asesoramiento gratuito
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp CTA -->
+  <div class="sticky-cta container mx-auto px-4 text-center">
+    <a 
+      href="https://wa.me/5493541658027?text=Hola!%20Quiero%20consultar%20sobre%20la%20cobertura%20de%20planes%20de%20salud." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="inline-block bg-green-500 text-white py-3 px-6 rounded-full font-bold hover:bg-green-600 transition duration-300"
+    >
+      Chatear por WhatsApp ahora
+    </a>
+  </div>
+
+  <!-- Sello de confianza -->
+  <section class="container mx-auto px-4 py-6 max-w-3xl">
+    <div class="bg-white p-4 rounded-lg shadow text-center">
+     <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" 
+     alt="Afiliación segura" 
+     class="mx-auto w-20 mb-2">
+
+      <p class="text-gray-700 font-semibold">✔️ Afiliación segura y sin trámites complicados</p>
+      <p class="text-sm text-gray-600 mt-2">Más de 1.000 familias en Córdoba ya confiaron en nosotros</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-8">
+    <div class="container mx-auto px-4 text-center space-y-2">
+      <p class="text-sm">© 2025 Cobertura Médica Córdoba. Todos los derechos reservados.</p>
+      <a href="politica-de-privacidad.html" class="text-blue-300 text-sm underline hover:text-blue-400">Política de Privacidad</a>
+      <a href="terminos-y-condiciones.html" class="text-blue-300 text-sm underline hover:text-blue-400">Términos y Condiciones</a>
+    </div>
+  </footer>
+
+  <!-- Conversion tracking -->
+  <script>
+    function conversionGoogle() {
+      if (window.gtag) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXX' // Reemplazá con tu ID de conversión
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
